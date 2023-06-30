@@ -26,7 +26,7 @@ su - "$_REMOTE_USER"
 wget -q "$URL/$ARCHIVE" 
     unzip -q "$ARCHIVE" 
     rm "$ARCHIVE" 
-    mv "$FOLDER" "$ANDROID_HOME/$FOLDER/bin" 
+    mv "$FOLDER" "$ANDROID_HOME/$FOLDER" 
     rm -rf "$FOLDER"
 
 PACKAGES=("platform-tools" "patcher;v4")
