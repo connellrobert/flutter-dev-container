@@ -38,6 +38,15 @@ if [[ ${BUILD-TOOLS} != "none" ]]; then
     PACKAGES+=("build-tools;${BUILD-TOOLS}")
 fi
 
+echo "searching in cmdline-tools"
+ls -al $ANDROID_HOME/$FOLDER
+
+echo "searching in bin"
+ls -al $ANDROID_HOME/$FOLDER/bin
+
+echo "finding sdkmanager"
+find -R / -name sdkmanager
+
 
 sdkmanager --install "${PACKAGES[@]}"
 # sdkmanager --install "platforms;android-30"
